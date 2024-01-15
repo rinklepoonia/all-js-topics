@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+    <link rel="stylesheet" href="./assets/css/tabs2.css">
+</head>
+
+<body>
+    <section class="d-flex justify-content align-item min-vh-100">
+        <div class="container">
+            <h1 class="heading">Tabs</h1>
+            <div class="tab-box">
+                <div class="tabs">
+                    <button data-tabtn-id="1" class="tab-links active">Tab-1</button>
+                    <button data-tabtn-id="2" class="tab-links">Tab-2</button>
+                    <button data-tabtn-id="3" class="tab-links">Tab-3</button>
+                </div>
+                <div class="tabContent">
+                    <div data-paraId="1" data-show="true">
+                        <h3>Tab 1</h3>
+                        <p class="tab-para pt-22">Massa, at est sit laoreet. Pellentesque sed habitasse
+                            nulla
+                            leo
+                            arcu
+                            quam. Tincidunt magnis dis odio at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.</p>
+                        <p class="tab-para py-8-40">
+                            Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu quam. Tincidunt magnis
+                            dis
+                            odio
+                            at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.
+                        </p>
+                    </div>
+                    <div data-paraId="2" data-show="false">
+                        <h3>Tab 2</h3>
+                        <p class="tab-para pt-22">Massa, at est sit laoreet. Pellentesque sed habitasse
+                            nulla
+                            leo
+                            arcu
+                            quam. Tincidunt magnis dis odio at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.</p>
+                        <p class="tab-para py-8-40">
+                            Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu quam. Tincidunt magnis
+                            dis
+                            odio
+                            at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.
+                        </p>
+                    </div>
+                    <div data-paraId="3" data-show="false">
+                        <h3>Tab 3</h3>
+                        <p class="tab-para pt-22">Massa, at est sit laoreet. Pellentesque sed habitasse
+                            nulla
+                            leo
+                            arcu
+                            quam. Tincidunt magnis dis odio at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.</p>
+                        <p class="tab-para py-8-40">
+                            Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu quam. Tincidunt magnis
+                            dis
+                            odio
+                            at. Viverra a, id
+                            amet massa metus eros. Sed donec scelerisque id neque, mauris id ultricies auctor dui.
+                            Auctor
+                            maecenas scelerisque eu
+                            orci viverra volutpat. In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin
+                            lacus.
+                            Orci, egestas porta
+                            nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+        const tablink = document.querySelectorAll(".tab-links");
+        tablink.forEach(e => {
+            e.addEventListener("click", () => {
+                const activeBtn = document.querySelector(".tab-links.active");
+                activeBtn.classList.remove("active");
+                e.classList.add("active");
+                const activePara = document.querySelector("[data-show=true]");
+                activePara.dataset.show = false;
+                const activeTab = document.querySelector(`[data-paraId="${e.dataset.tabtnId}"]`);
+                activeTab.dataset.show = true;
+            })
+        })
+    </script>
+</body>
+
+</html>
