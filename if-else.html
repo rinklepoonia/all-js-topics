@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+</head>
+
+<body>
+
+    <script>
+        // Ticket Price Calculator:
+
+        // Children(age 0 - 12): $5
+        // Adults(age 13 - 64): $10
+        // Seniors(age 65 +): $7
+        let age = 77;
+        if (age <= 12) {
+            console.log("ticket is 5 dollar")
+        }
+        else if (age > 13 && age < 64) {
+            console.log("ticket is 10 dollar")
+        }
+        else {
+            console.log("ticket is 7 dollar")
+        }
+
+        // Password Strength Checker:
+
+        // Weak: Less than 6 characters
+        // Medium: Between 6 and 10 characters
+        // Strong: More than 10 characters
+        let x = 15
+        if (x < 6) {
+            console.log("Weak password put a strong one")
+        }
+        else if (x >= 6 && x <= 10) {
+            console.log(" Medium Password")
+        }
+        else {
+            console.log("strong password")
+        }
+
+        // BMI Category Checker:
+
+        // Underweight: BMI less than 18.5
+        //Normal weight: BMI between 18.5 and 24.9
+        //Overweight: BMI between 25 and 29.9
+        //Obese: BMI 30 or above
+        let BMI = 25
+        if (BMI < 18.5) {
+            console.log("underweight")
+        }
+        else if (BMI >= 18.5 && BMI <= 24.9) {
+            console.log("normal weight")
+        }
+        else if (BMI >= 25 && BMI <= 29.9) {
+            console.log("alert!you are Overweight")
+        }
+        else {
+            console.log(" alert! you are obese")
+        }
+
+        // Positive Negative or zero Sum:
+        let numb1 = -1;
+        let numb2 = 3
+        let numb3 = -1
+
+        if (numb1 + numb2 + numb3) {
+            console.log("sum is +ve")
+        }
+        else if (numb1 - numb2 + numb3) {
+            console.log("sum is -ve ")
+        }
+        else {
+            console.log("sum is zero")
+        }
+
+        // Palindrome Checker:
+        let word = "1001"
+        let reversewalaeord = word.split("").reverse().join("");
+
+        if (word === reversewalaeord) {
+            console.log("yes its palindrome");
+        } else {
+            console.log("no its not palindrome");
+        }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
