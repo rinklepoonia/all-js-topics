@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards-js</title>
+    <style>
+        .card {
+            background: skyblue;
+            border: 2px solid gray;
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cardcontainer"></div>
+
+    <script>
+        const myarr = [
+            {
+                Name: "Rinkle",
+                Age: 18,
+                About: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Perferendis obcaecati deserunt officia alias, inventore deleniti animi commodi voluptas soluta, nulla natus nisi non magnam officiis,"
+            },
+
+            {
+                Name: "Rinkle",
+                Age: 18,
+                About: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Perferendis obcaecati deserunt officia alias, inventore deleniti animi commodi voluptas soluta, nulla natus nisi non magnam officiis,"
+            },
+
+            {
+                Name: "Rinkle",
+                Age: 18,
+                About: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Perferendis obcaecati deserunt officia alias, inventore deleniti animi commodi voluptas soluta, nulla natus nisi non magnam officiis,"
+            },
+        ]
+
+        const cardcontainer = document.getElementById("cardcontainer")
+        //1. for each cards
+
+        // myarr.forEach(element => {
+        //     const cardelement = document.createElement("div")
+        //     cardelement.className = "card"
+        //     cardelement.innerHTML = `
+        //     <h1> ${element.Name}</h1>
+        //     <p> ${element.Age}</p>`
+        //     cardcontainer.appendChild(cardelement)
+        // })
+
+        //2. for-loop cards
+
+        for (let i = 0; i < myarr.length; i++) {
+            const cardelement = document.createElement("div");
+            cardelement.className = "card"
+            cardelement.innerHTML = `
+            <h1> ${myarr[i].Name}</h1>
+            <p> ${myarr[i].Age}</p>
+            img`
+            cardcontainer.appendChild(cardelement)
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

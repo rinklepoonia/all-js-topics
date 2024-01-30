@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        .checkBtn {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .remove {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+
+        .line {
+            text-decoration: line-through;
+        }
+
+        .hidden {
+            display: hidden;
+        }
+
+        /* input[type="checkbox"]:checked~label {
+            text-decoration: line-through;
+        } */
+    </style>
+</head>
+
+<body>
+    <section>
+        <input type="text" id="inputBox" placeholder="add you task">
+        <button onclick="task()" id="btn">add</button>
+        <ul id="ul"></ul>
+        <!-- <input type="time" id="timeInput"> -->
+    </section>
+
+    <script>
+        const inputBox = document.getElementById("inputBox");
+        const btn = document.getElementById("btn");
+        const ul = document.getElementById("ul");
+        const time = new Date().toLocaleString();
+
+        // const time = new Date()
+        // console.log(time)
+
+        function task() {
+            if (inputBox.value === '') {
+                alert("you must write something!");
+            } else {
+                const li = document.createElement("li")
+                li.className = "list"
+                li.innerHTML = `
+                 <button  class="checkBtn hidden" onclick = "completeTask(event)">check</button>
+                <span>${inputBox.value}</span>
+                <span>${time}</span>
+                 <button class="remove" onclick = "removebtn(event)">remove</button>
+
+               `
+                ul.appendChild(li)
+                inputBox.value = ''
+            }
+        }
+
+        function removebtn() {
+            const li = event.target.parentElement
+            // console.log(li)
+            ul.removeChild(li)
+        }
+
+        function completeTask() {
+            const li = event.target.parentElement
+            li.classList.toggle("line")
+        }
+
+
+
+
+
+        // const checkbtnn = document.querySelector(".checkbtnn");
+        //      const underline = document.querySelector("underline");
+        //      checkbtnn.addEventListener("click", function () {
+        //      li.classList.toggle("underline")
+        //      }) 
+
+
+    </script>
+</body>
+
+</html>
