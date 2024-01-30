@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time-watch js</title>
+</head>
+
+<body onload="startime()">
+    <p id="timer"></p>
+    <button onclick="stopbtn()">stop</button>
+    <script>
+        // 1.setTimeout
+        // function startime() {
+        //     const time = new Date();
+        //     document.getElementById("timer").innerHTML = time.toLocaleTimeString();
+        //     setTimeout(function () {
+        //         startime()
+        //     }, 1000);
+        // }
+
+        // 2.setInterval
+        const interval = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            const time = new Date();
+            document.getElementById("timer").innerHTML = time.toLocaleTimeString();
+        }
+        function stopbtn() {
+            clearInterval(interval);
+        }
+
+
+        // var currentyear = new Date().getFullYear()
+        // console.log(currentyear)
+
+
+    </script>
+</body>
+
+</html>
