@@ -34,8 +34,6 @@
     height: 100vh;
 }
 
-
-
 .mx-w-468 {
     max-width: 468px;
 }
@@ -58,7 +56,6 @@
 
 .accordionHead {
     cursor: pointer;
-
 }
 
 .heading {
