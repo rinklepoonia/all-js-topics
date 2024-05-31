@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preloder</title>
+</head>
+
+<body>
+    <div id="preload"
+        class="h-100 min-vh-100 w-100 d-flex align-items-center justify-content-center bg-white z-11 position-fixed start-0 top-0">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <img src="any-img" alt="single-logo" class="w-100 max-w-130">
+            <div class="text-uppercase">
+                anytext
+            </div>
+        </div>
+    </div>
+    <script>
+        const Preload = document.getElementById("preload")
+        setTimeout(() => {
+            document.body.classList.remove("overflow-hidden");
+            Preload.classList.add("d-none")
+        }, "4300");
+
+    </script>
+</body>
+
+</html>

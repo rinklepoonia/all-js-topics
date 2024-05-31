@@ -1,0 +1,23 @@
+function navtabs(tabs) {
+const tabshow = document.querySelectorAll('.tabshow')
+const tabbtn = document.querySelectorAll('.tabs button')
+tabshow.forEach(content => {
+content.style.display = 'none'
+})
+
+const selecttoshow = document.getElementById(tabs)
+selecttoshow.style.display = 'block'
+
+tabbtn.forEach(content => {
+content.classList.remove('text-red-500')
+content.classList.remove('bottom_line')
+})
+
+
+
+const activeTab = document.querySelector(`button[onclick="navtabs('${tabs}')"]`)
+activeTab.classList.add("text-red-500")
+activeTab.classList.add("bottom_line")
+}
+navtabs('tab1')
+
